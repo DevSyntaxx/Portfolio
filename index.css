@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
 
 :root {
-    --bg-color: #FFFFFF;
+    --bg-color: #F8F9FA;
     --text-primary: #0A0A0A;
     --text-secondary: #666666;
     --accent-gold: #D4AF37;
     --accent-gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
-    --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
     --transition-premium: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --font-main: 'Outfit', sans-serif;
@@ -22,13 +22,13 @@
 body {
     background-color: var(--bg-color);
     background-image: 
-        radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
-        radial-gradient(at 0% 100%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
-        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px;
     background-attachment: fixed;
     color: var(--text-primary);
     font-family: var(--font-main);
@@ -268,7 +268,9 @@ nav .container {
 
 /* About Section */
 .about {
-    background: #fafafa;
+    background: white;
+    border-top: 1px solid rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.03);
 }
 
 .about-grid {
