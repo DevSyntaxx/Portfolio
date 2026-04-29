@@ -65,11 +65,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form Submission
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Here you would normally send the data to a server
-            // For now, we just redirect to the thanks page
-            window.location.href = 'thanks.html';
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    window.location.href = 'thanks.html';
+                } else {
+                    alert('Ops! Ocorreu um erro ao enviar sua mensagem. Tente novamente ou use o WhatsApp.');
+                }
+            } catch (error) {
+                alert('Erro de conexão. Verifique sua internet e tente novamente.');
+            }
         });
     }
 

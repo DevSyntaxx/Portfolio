@@ -365,11 +365,11 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Nome Completo" required>
-                    <input type="email" placeholder="E-mail Profissional" required>
-                    <input type="text" placeholder="Nome da Empresa / Ramo" required>
-                    <textarea placeholder="Fale um pouco sobre seu projeto e objetivos..." rows="4"></textarea>
+                <form class="contact-form" action="https://formspree.io/f/mvzlpwlr" method="POST">
+                    <input type="text" name="nome" placeholder="Nome Completo" required>
+                    <input type="email" name="email" placeholder="E-mail Profissional" required>
+                    <input type="text" name="empresa" placeholder="Nome da Empresa / Ramo" required>
+                    <textarea name="mensagem" placeholder="Fale um pouco sobre seu projeto e objetivos..." rows="4"></textarea>
                     <button type="submit" class="btn btn-gold">Enviar Solicitação</button>
                 </form>
             </div>
