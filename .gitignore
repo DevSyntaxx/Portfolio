@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.env
+.system_generated/
+*.webp
+walkthrough.md
+walkthrough.md.metadata.json
+walkthrough.md.resolved*
