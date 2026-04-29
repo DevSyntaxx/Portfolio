@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado | BRAND.</title>
+    <link rel="stylesheet" href="index.css?v=2.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .thanks-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .thanks-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-gold-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <section class="thanks-section">
+        <div class="thanks-icon">
+            <i data-lucide="check" style="width: 40px; height: 40px;"></i>
+        </div>
+        <h1 style="font-size: 3.5rem; font-weight: 300; margin-bottom: 20px;">Sua solicitação foi enviada!</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px;">
+            Obrigado pelo interesse. Em menos de 24 horas entrarei em contato pessoalmente para darmos o próximo passo na transformação do seu negócio.
+        </p>
+        <a href="index.html" class="btn btn-primary">Voltar para o site</a>
+    </section>
+
+    <script src="index.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

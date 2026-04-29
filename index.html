@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="index.css?v=2.0">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics [PLACEHOLDER] -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Meta Pixel Code [PLACEHOLDER] -->
+    <!-- <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'XXXXXXXXXXXXXXX');
+      fbq('track', 'PageView');
+    </script> -->
 </head>
 <body>
     <!-- Pre-loader -->
@@ -43,7 +68,7 @@
                 <h1>Transforme seu negócio local em uma marca de luxo digital</h1>
                 <p>Criamos sites e landing pages de alto padrão que convertem visitantes em clientes fiéis. O posicionamento que sua empresa merece, com a tecnologia que seu lucro exige.</p>
                 <div class="hero-btns">
-                    <a href="#contato" class="btn btn-gold">Garantir meu projeto premium</a>
+                    <a href="javascript:void(0);" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/YOUR_LINK'});return false;" class="btn btn-gold">Agendar Consultoria Gratuita</a>
                     <a href="#projetos" class="btn btn-secondary">Ver portfólio de elite</a>
                 </div>
                 <div class="hero-trust-bar">
@@ -165,7 +190,7 @@
             <h2 style="text-align: center; margin-bottom: 60px; font-weight: 300; font-size: 3rem;">Projetos Selecionados</h2>
             <div class="projects-grid">
                 <div class="project-item reveal">
-                    <img src="project1.png" alt="Clínica Vitalle">
+                    <img src="project1.png" alt="Clínica Vitalle" loading="lazy">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h4>Clínica Vitalle</h4>
@@ -174,7 +199,7 @@
                     </div>
                 </div>
                 <div class="project-item reveal">
-                    <img src="project2.png" alt="Restaurante Divino">
+                    <img src="project2.png" alt="Restaurante Divino" loading="lazy">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h4>Restaurante Divino</h4>
@@ -183,7 +208,7 @@
                     </div>
                 </div>
                 <div class="project-item reveal">
-                    <img src="project3.png" alt="Lux Store">
+                    <img src="project3.png" alt="Lux Store" loading="lazy">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h4>Lux Store</h4>
@@ -192,7 +217,7 @@
                     </div>
                 </div>
                 <div class="project-item reveal">
-                    <img src="project2.png" alt="Consultório Prime">
+                    <img src="project2.png" alt="Consultório Prime" loading="lazy">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h4>Consultório Prime</h4>
