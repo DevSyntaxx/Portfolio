@@ -92,9 +92,19 @@ nav .container {
     opacity: 0.7;
 }
 
-.nav-links a:hover {
+.nav-links a.nav-cta {
+    background: var(--text-primary);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
     opacity: 1;
-    color: var(--accent-gold);
+    font-weight: 500;
+}
+
+.nav-links a.nav-cta:hover {
+    background: var(--accent-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
 /* Hero Section */
