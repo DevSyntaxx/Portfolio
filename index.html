@@ -67,7 +67,10 @@
     <!-- Pre-loader -->
     <div class="preloader">
         <div class="loader-content">
-            <div class="loader-logo">Felipe<span> Morais</span></div>
+            <div class="loader-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                Felipe<span> Morais</span>
+            </div>
             <div class="loader-bar"></div>
         </div>
     </div>
@@ -79,7 +82,10 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">Felipe<span> Morais</span></div>
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                Felipe<span> Morais</span>
+            </div>
             <div class="nav-links">
                 <a href="#inicio">Início</a>
                 <a href="#servicos">Serviços</a>
@@ -102,7 +108,10 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <div class="logo">Felipe<span> Morais</span></div>
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                Felipe<span> Morais</span>
+            </div>
             <button class="close-menu" aria-label="Fechar menu"><i data-lucide="x"></i></button>
         </div>
         <div class="mobile-menu-links">
@@ -587,7 +596,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo">Felipe<span> Morais</span></div>
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        Felipe<span> Morais</span>
+                    </div>
                     <p>Design de elite para marcas que buscam o topo.</p>
                 </div>
                 <div class="footer-nav">
@@ -600,17 +612,51 @@
                 <div class="footer-social">
                     <h5>Social</h5>
                     <div class="social-icons">
-                        <a href="#"><i data-lucide="instagram"></i></a>
-                        <a href="#"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
+                        <a href="https://instagram.com/felipemorais_" target="_blank"><i data-lucide="instagram"></i></a>
+                        <a href="https://linkedin.com/in/felipemorais" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://github.com/DevSyntaxx" target="_blank"><i data-lucide="github"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">© 2026 Felipe Morais. Todos os direitos reservados. Design by Elite Studio.</p>
+                <p class="copyright">© <span id="current-year"></span> Felipe Morais. Todos os direitos reservados. Design by Elite Studio.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i data-lucide="x"></i></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-tag">Case Study</span>
+                    <h2 id="modal-title">Título do Projeto</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-img" src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <div class="info-group">
+                            <h5>O Desafio</h5>
+                            <p id="modal-challenge"></p>
+                        </div>
+                        <div class="info-group">
+                            <h5>A Solução</h5>
+                            <p id="modal-solution"></p>
+                        </div>
+                        <div class="info-group">
+                            <h5>O Resultado</h5>
+                            <p id="modal-result" class="highlight-result"></p>
+                        </div>
+                        <a href="#" class="btn btn-gold calendly-trigger" style="width: 100%; text-align: center;">Quero um resultado assim</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>

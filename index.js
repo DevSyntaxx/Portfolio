@@ -222,6 +222,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Dynamic Copyright Year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.innerText = new Date().getFullYear();
+    }
+
+    // Project Data for Modals
+    const projectData = {
+        'cmplace': {
+            title: 'CM Place',
+            img: 'cmplace_hero.png',
+            challenge: 'A CM Place precisava de uma presença digital que refletisse o luxo e a exclusividade de seus produtos Apple. O site antigo era genérico e não convertia leads qualificados.',
+            solution: 'Desenvolvemos uma interface editorial minimalista, com foco em fotografia de alto padrão e micro-interações que guiam o usuário pelo funil de desejo.',
+            result: 'Aumento de 200% na taxa de conversão e um posicionamento de mercado 100% alinhado ao público de alto ticket.'
+        },
+        'vitalle': {
+            title: 'Clínica Vitalle',
+            img: 'project1.png',
+            challenge: 'A clínica tinha dificuldades em converter visitantes do tráfego pago em agendamentos reais. A jornada do paciente era confusa.',
+            solution: 'Reestruturamos a Landing Page focando na autoridade médica e na facilidade de agendamento via WhatsApp em menos de 3 cliques.',
+            result: '+70% de agendamentos no primeiro mês e redução de 40% no custo por lead.'
+        }
+    };
+
+    // Modal Logic
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImg = document.getElementById('modal-img');
+    const modalChallenge = document.getElementById('modal-challenge');
+    const modalSolution = document.getElementById('modal-solution');
+    const modalResult = document.getElementById('modal-result');
+    const closeModal = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    const openProjectModal = (projectId) => {
+        const data = projectData[projectId];
+        if (!data) return;
+
+        modalTitle.innerText = data.title;
+        modalImg.src = data.img;
+        modalChallenge.innerText = data.challenge;
+        modalSolution.innerText = data.solution;
+        modalResult.innerText = data.result;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const hideProjectModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
+
+    document.querySelectorAll('.project-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const projectId = item.dataset.project;
+            if (projectId) openProjectModal(projectId);
+        });
+    });
+
+    if (closeModal) closeModal.addEventListener('click', hideProjectModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', hideProjectModal);
+
     // Navbar background change on scroll
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
