@@ -1130,6 +1130,16 @@ nav .container {
     gap: 40px;
 }
 
+.projects-grid.featured-single {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.featured-single .project-item {
+    aspect-ratio: 16 / 9;
+}
+
 .project-item {
     position: relative;
     border-radius: 40px;
