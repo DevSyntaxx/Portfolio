@@ -45,6 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Number Animation
+    const animateNumbers = (el) => {
+        const target = parseInt(el.innerText.replace(/\D/g, ''));
+        const suffix = el.innerText.replace(/[0-9]/g, '');
+        let current = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        
+        const update = () => {
+            current += step;
+            if (current < target) {
+                el.innerText = Math.floor(current) + suffix;
+                requestAnimationFrame(update);
+            } else {
+                el.innerText = target + suffix;
+            }
+        };
+        update();
+    };
+
     // Reveal Animation
     const reveals = document.querySelectorAll('.reveal');
     const observerOptions = {
@@ -56,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+                
+                // Animate numbers if element contains stat-number
+                const stats = entry.target.querySelectorAll('.stat-number, .trust-item strong');
+                stats.forEach(stat => {
+                    if (!stat.dataset.animated) {
+                        animateNumbers(stat);
+                        stat.dataset.animated = "true";
+                    }
+                });
             }
         });
     }, observerOptions);
