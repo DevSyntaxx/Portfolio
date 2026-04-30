@@ -1546,6 +1546,17 @@ footer {
     font-size: 1.1rem;
 }
 
+.comp-card.common {
+    background: #fdfdfd;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+}
+
+[data-theme="dark"] .comp-card.common {
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
 .comp-card.common i { color: #ff4d4d; }
 .comp-card.premium i { color: #2ecc71; }
 
