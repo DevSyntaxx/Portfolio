@@ -285,6 +285,73 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeModal) closeModal.addEventListener('click', hideProjectModal);
     if (modalOverlay) modalOverlay.addEventListener('click', hideProjectModal);
 
+    // Scrollspy Logic
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const scrollSpy = () => {
+        const scrollPos = window.scrollY + 100;
+
+        sections.forEach(section => {
+            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${section.id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    };
+
+    window.addEventListener('scroll', scrollSpy);
+
+    // Form Handling (AJAX)
+    const contactForm = document.querySelector('.contact-form');
+    const successModal = document.getElementById('success-modal');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+            
+            submitBtn.innerText = 'Enviando...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    successModal.classList.add('active');
+                    contactForm.reset();
+                } else {
+                    alert('Erro ao enviar mensagem. Por favor, tente novamente.');
+                }
+            } catch (error) {
+                alert('Erro na conexão. Verifique sua internet.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+
+    // Modal Close buttons for Success Modal
+    document.querySelectorAll('#success-modal .modal-close, #success-modal .modal-close-btn, #success-modal .modal-overlay').forEach(btn => {
+        btn.addEventListener('click', () => {
+            successModal.classList.remove('active');
+        });
+    });
+
     // Navbar background change on scroll
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
