@@ -6,6 +6,10 @@
     <title>Obrigado | BRAND.</title>
     <link rel="stylesheet" href="index.css?v=2.0">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
     <style>
         .thanks-section {
             height: 100vh;
@@ -41,7 +45,10 @@
         <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px;">
             Obrigado pelo interesse. Em menos de 24 horas entrarei em contato pessoalmente para darmos o próximo passo na transformação do seu negócio.
         </p>
-        <a href="index.html" class="btn btn-primary">Voltar para o site</a>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <a href="javascript:void(0);" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soufelipemorais/30min'});return false;" class="btn btn-gold">Deseja acelerar? Agendar reunião agora</a>
+            <a href="index.html" class="btn btn-secondary">Voltar para o site</a>
+        </div>
     </section>
 
     <script src="index.js"></script>
