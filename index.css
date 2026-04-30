@@ -1505,24 +1505,7 @@ footer {
     margin-bottom: 10px;
 }
 
-/* WhatsApp Float */
-.whatsapp-float {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background: #25d366;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-    z-index: 2000;
-    transition: var(--transition-premium);
-}
+
 
 /* Responsive */
 /* Responsive Improvements */
