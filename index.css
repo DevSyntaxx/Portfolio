@@ -36,6 +36,16 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -47,8 +57,13 @@ body {
     color: var(--text-primary);
     font-family: var(--font-main);
     line-height: 1.8;
-    overflow-x: hidden;
     position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 body::after {
