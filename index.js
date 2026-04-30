@@ -2,16 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lucide Icons
     lucide.createIcons();
 
-    // Preloader
+    // Preloader - Robust Handling
     const preloader = document.querySelector('.preloader');
-    window.addEventListener('load', () => {
+    const hidePreloader = () => {
+        if (!preloader) return;
         setTimeout(() => {
             preloader.style.opacity = '0';
             setTimeout(() => {
                 preloader.style.visibility = 'hidden';
             }, 800);
-        }, 1000);
-    });
+        }, 500);
+    };
+
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader);
+    }
+
+    // Fallback: hide preloader after 5 seconds anyway
+    setTimeout(hidePreloader, 5000);
 
     // Custom Cursor
     const cursorDot = document.querySelector('.cursor-dot');
@@ -178,32 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach(el => observer.observe(el));
 
-    // Form Submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
 
-                if (response.ok) {
-                    window.location.href = 'thanks.html';
-                } else {
-                    alert('Ops! Ocorreu um erro ao enviar sua mensagem. Tente novamente ou use o WhatsApp.');
-                }
-            } catch (error) {
-                alert('Erro de conexão. Verifique sua internet e tente novamente.');
-            }
-        });
-    }
 
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
