@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Cursor hover effects
-    const interactiveElements = document.querySelectorAll('a, button, .service-card, .project-item, .stat, .pillar');
+    const interactiveElements = document.querySelectorAll('a, button, .service-card, .project-item, .stat, .pillar, .testimonial-card');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
@@ -42,6 +42,93 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
             cursorOutline.style.backgroundColor = 'transparent';
             cursorOutline.style.borderColor = 'rgba(212, 175, 55, 0.3)';
+        });
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', savedTheme);
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const hideMenu = () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeMenu.addEventListener('click', hideMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', hideMenu));
+    }
+
+    // Magnetic Button Effect
+    const magneticBtns = document.querySelectorAll('.magnetic');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', function(e) {
+            const position = btn.getBoundingClientRect();
+            const x = e.pageX - position.left - position.width / 2;
+            const y = e.pageY - position.top - position.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+        });
+
+        btn.addEventListener('mouseout', function() {
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
+
+    // Simple Tilt Effect
+    const tiltElements = document.querySelectorAll('.tilt');
+    tiltElements.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const { left, top, width, height } = el.getBoundingClientRect();
+            const x = (e.clientX - left) / width;
+            const y = (e.clientY - top) / height;
+            
+            const rotateX = (y - 0.5) * 10;
+            const rotateY = (x - 0.5) * -10;
+            
+            el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        });
+    });
+
+    // Calendly Integration
+    const calendlyBtns = document.querySelectorAll('.calendly-trigger');
+    calendlyBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({ url: 'https://calendly.com/sua-agenda' });
+            } else {
+                alert('O agendador está carregando. Por favor, tente novamente em instantes ou chame no WhatsApp.');
+            }
         });
     });
 
@@ -121,11 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth Scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
+            
             const target = document.querySelector(targetId);
             if (target) {
+                e.preventDefault();
                 window.scrollTo({
                     top: target.offsetTop - 80,
                     behavior: 'smooth'
@@ -138,10 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
         if (window.scrollY > 50) {
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.style.background = body.getAttribute('data-theme') === 'dark' ? 'rgba(5, 5, 5, 0.95)' : 'rgba(255, 255, 255, 0.95)';
             nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
         } else {
-            nav.style.background = 'rgba(255, 255, 255, 0.8)';
+            nav.style.background = body.getAttribute('data-theme') === 'dark' ? 'rgba(5, 5, 5, 0.8)' : 'rgba(255, 255, 255, 0.8)';
             nav.style.boxShadow = 'none';
         }
     });

@@ -14,25 +14,47 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics [PLACEHOLDER] -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script> -->
-
-    <!-- Meta Pixel Code [PLACEHOLDER] -->
-    <!-- <script>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'XXXXXXXXXXXXXXX');
-      fbq('track', 'PageView');
-    </script> -->
+    <!-- JSON-LD Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Felipe Morais | Elite Web Design",
+      "image": "https://vossosubdominio.com/profile.jpg",
+      "@id": "",
+      "url": "https://vossosubdominio.com",
+      "telephone": "+5500000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "postalCode": "",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -15.7942,
+        "longitude": -47.8822
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://instagram.com/felipemorais",
+        "https://linkedin.com/in/felipemorais"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Floating Background Elements -->
@@ -64,8 +86,33 @@
                 <a href="#projetos">Projetos</a>
                 <a href="#contato" class="nav-cta">Falar comigo</a>
             </div>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
+                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">Felipe<span> Morais</span></div>
+            <button class="close-menu" aria-label="Fechar menu"><i data-lucide="x"></i></button>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="#" class="btn btn-gold calendly-trigger">Agendar Reunião</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
@@ -75,8 +122,8 @@
                 <h1>Seu site atual está te fazendo perder clientes todos os dias — mesmo enquanto você <span class="highlight">dorme</span>.</h1>
                 <p>Pare de investir em "sites bonitinhos" que não trazem retorno. Criamos <span class="highlight">máquinas de vendas</span> de alto padrão que transformam visitantes em dinheiro no seu bolso.</p>
                 <div class="hero-btns">
-                    <a href="#contato" class="btn btn-gold">Quero um site que vende</a>
-                    <a href="#projetos" class="btn btn-secondary">Quero atrair mais clientes</a>
+                    <a href="#contato" class="btn btn-gold magnetic">Quero um site que vende</a>
+                    <a href="javascript:void(0)" class="btn btn-secondary magnetic calendly-trigger">Agendar Reunião VIP</a>
                 </div>
                 <div class="hero-trust-bar">
                     <div class="trust-item">
@@ -195,22 +242,22 @@
                 <h2 style="font-size: 3rem; margin-bottom: 50px;">Soluções exclusivas para negócios que buscam o topo</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card reveal">
+                <div class="service-card reveal tilt">
                     <i data-lucide="award" class="service-icon"></i>
                     <h3>Posicionamento de Autoridade</h3>
                     <p>Sites institucionais que transmitem confiança imediata e consolidam sua marca no mercado.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal tilt">
                     <i data-lucide="rocket" class="service-icon"></i>
                     <h3>Landing Pages de Alta Performance</h3>
                     <p>Estruturas validadas psicologicamente para maximizar cada centavo do seu tráfego pago.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal tilt">
                     <i data-lucide="component" class="service-icon"></i>
                     <h3>Sistemas de Elite</h3>
                     <p>Desenvolvimento de aplicações robustas para automatizar processos e escalar sua operação.</p>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card reveal tilt">
                     <i data-lucide="zap" class="service-icon"></i>
                     <h3>Otimização de Conversão (CRO)</h3>
                     <p>Auditoria e ajustes técnicos para remover fricções e aumentar sua taxa de fechamento.</p>
@@ -454,21 +501,55 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card reveal">
-                    <p>"O novo site mudou o jogo para minha clínica. Hoje recebemos muito mais agendamentos pelo WhatsApp do que antes."</p>
+                    <div class="testimonial-content">
+                        <p>"O novo site mudou o jogo para minha clínica. Hoje recebemos muito mais agendamentos pelo WhatsApp do que antes."</p>
+                    </div>
                     <div class="testimonial-author">
-                        <span>João Silva - Dono da Clínica Sorriso</span>
+                        <img src="https://i.pravatar.cc/100?u=joao" alt="João Silva" class="author-img">
+                        <div class="author-info">
+                            <h5>João Silva</h5>
+                            <span>Clínica Sorriso</span>
+                        </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal">
-                    <p>"Eu achava que não precisava de site, mas o design premium passou uma confiança que fez minhas vendas dobrarem."</p>
+                    <div class="testimonial-content">
+                        <p>"Eu achava que não precisava de site, mas o design premium passou uma confiança que fez minhas vendas dobrarem."</p>
+                    </div>
                     <div class="testimonial-author">
-                        <span>Maria Oliveira - Proprietária da Lux Store</span>
+                        <img src="https://i.pravatar.cc/100?u=maria" alt="Maria Oliveira" class="author-img">
+                        <div class="author-info">
+                            <h5>Maria Oliveira</h5>
+                            <span>Lux Store</span>
+                        </div>
                     </div>
                 </div>
                 <div class="testimonial-card reveal">
-                    <p>"O site carrega instantaneamente no celular dos clientes. Ficou muito fácil para eles verem nossos produtos e pedirem."</p>
+                    <div class="testimonial-content">
+                        <p>"O site carrega instantaneamente no celular dos clientes. Ficou muito fácil para eles verem nossos produtos e pedirem."</p>
+                    </div>
                     <div class="testimonial-author">
-                        <span>Ricardo Lima - Dono do Restaurante Divino</span>
+                        <img src="https://i.pravatar.cc/100?u=ricardo" alt="Ricardo Lima" class="author-img">
+                        <div class="author-info">
+                            <h5>Ricardo Lima</h5>
+                            <span>Restaurante Divino</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <div class="cta-content">
+                    <h2>Pronto para elevar seu posicionamento digital?</h2>
+                    <p>Vagas limitadas para novos projetos este mês. Garanta sua consultoria estratégica agora.</p>
+                    <div class="cta-btns">
+                        <a href="#contato" class="btn btn-gold magnetic">Iniciar meu projeto</a>
+                        <a href="javascript:void(0)" class="btn btn-outline-white magnetic calendly-trigger">Ver agenda disponível</a>
                     </div>
                 </div>
             </div>
