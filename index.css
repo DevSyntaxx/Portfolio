@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap');
 
 :root {
-    --bg-color: #F8F9FA;
+    --bg-color: #FBFBFC;
     --text-primary: #0A0A0A;
-    --text-secondary: #666666;
+    --text-secondary: #555555;
     --accent-gold: #D4AF37;
-    --accent-gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F1D592 50%, #D4AF37 100%);
-    --shadow-premium: 0 30px 60px -12px rgba(0, 0, 0, 0.12);
-    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-    --transition-premium: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --accent-gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F3D995 50%, #D4AF37 100%);
+    --shadow-premium: 0 40px 100px -20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 50px 120px -20px rgba(212, 175, 55, 0.15);
+    --transition-premium: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -136,13 +136,13 @@ body::before {
 }
 
 section {
-    padding: 100px 0;
+    padding: 140px 0;
 }
 
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: var(--transition-smooth);
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
@@ -157,13 +157,14 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition-premium);
 }
 
 nav .container {
-    height: 80px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -440,10 +441,10 @@ nav .container {
 .tag {
     color: var(--accent-gold);
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
     display: block;
 }
 
@@ -582,36 +583,19 @@ nav .container {
 }
 
 .service-card {
-    padding: 50px;
+    padding: 60px;
     background: #fff;
-    border: 1px solid rgba(0,0,0,0.03);
-    border-radius: 32px;
+    border: 1px solid rgba(0,0,0,0.02);
+    border-radius: 40px;
     transition: var(--transition-premium);
     position: relative;
     overflow: hidden;
 }
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--accent-gold-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: var(--transition-premium);
-}
-
-.service-card:hover::before {
-    transform: scaleX(1);
-}
-
 .service-card:hover {
-    transform: translateY(-15px);
+    transform: translateY(-20px) scale(1.02);
     box-shadow: var(--shadow-premium);
-    border-color: transparent;
+    border-color: rgba(212, 175, 55, 0.1);
 }
 
 .service-icon {
