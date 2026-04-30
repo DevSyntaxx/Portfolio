@@ -137,8 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             if (typeof Calendly !== 'undefined') {
-                // SUBSTITUA O LINK ABAIXO PELO SEU LINK REAL DO CALENDLY
-                Calendly.initPopupWidget({ url: 'https://calendly.com/soufelipemorais' });
+                Calendly.initPopupWidget({ url: 'https://calendly.com/soufelipemorais/30min' });
             } else {
                 alert('O agendador está carregando. Por favor, tente novamente em instantes ou chame no WhatsApp.');
             }
