@@ -386,6 +386,59 @@ nav .container {
     50% { transform: translateY(-20px) rotateX(-2deg) rotateY(5deg); }
 }
 
+/* Pain Section */
+.pain-section {
+    background: #fff;
+    padding: 120px 0;
+}
+
+.pain-grid {
+    text-align: center;
+}
+
+.pain-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+}
+
+.pain-item {
+    text-align: center;
+    padding: 40px;
+    background: #fafafa;
+    border-radius: 40px;
+    transition: var(--transition-premium);
+}
+
+.pain-item:hover {
+    transform: translateY(-10px);
+    background: #fff;
+    box-shadow: 0 30px 60px rgba(255, 77, 77, 0.05);
+    border: 1px solid rgba(255, 77, 77, 0.1);
+}
+
+.pain-item i {
+    margin-bottom: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+.pain-item h5 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.pain-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 968px) {
+    .pain-items { grid-template-columns: 1fr; gap: 30px; }
+}
+
 /* About Section */
 .about {
     background: white;
