@@ -223,6 +223,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Project Data for Modals
     const projectData = {
+        'techflow': {
+            title: 'TechFlow SaaS',
+            img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+            challenge: 'O mercado de assistências técnicas sofre com gestões baseadas em papel e WhatsApp. O desafio era criar uma plataforma All-in-One que substituísse processos manuais por tecnologia de ponta.',
+            solution: 'Desenvolvimento de um SaaS Full-Stack utilizando React, Vite e Supabase. Uma interface premium que engloba controle de clientes, estoque, finanças e ordens de serviço com zero fricção.',
+            result: 'Um produto digital completo, validado no mercado, com arquitetura multi-tenant pronta para escalar e design comparável às maiores startups globais.',
+            link: 'http://localhost:5173'
+        },
         'cmplace': {
             title: 'CM Place',
             img: 'cmplace_hero.png',
@@ -258,6 +266,16 @@ document.addEventListener('DOMContentLoaded', () => {
         modalChallenge.innerText = data.challenge;
         modalSolution.innerText = data.solution;
         modalResult.innerText = data.result;
+
+        const externalLinkContainer = document.getElementById('modal-external-link');
+        const externalLinkAnchor = externalLinkContainer.querySelector('a');
+        if (data.link) {
+            externalLinkAnchor.href = data.link;
+            externalLinkContainer.style.display = 'block';
+        } else {
+            externalLinkContainer.style.display = 'none';
+            externalLinkAnchor.href = '#';
+        }
 
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';

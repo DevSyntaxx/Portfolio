@@ -266,7 +266,18 @@
         <div class="container">
             <span class="tag" style="text-align: center; display: block;">Portfólio Premium</span>
             <h2 style="text-align: center; margin-bottom: 60px; font-weight: 300; font-size: 3rem;">Projetos Selecionados</h2>
-            <div class="projects-grid featured-single">
+            <div class="projects-grid">
+                <div class="project-item reveal tilt" data-project="techflow">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="TechFlow - SaaS de Gestão" loading="lazy" style="opacity: 0.8;">
+                    <div class="project-overlay">
+                        <div class="project-info">
+                            <span class="project-tag">SaaS / Produto Próprio</span>
+                            <h4>TechFlow — Gestão Inteligente</h4>
+                            <p style="color: rgba(255,255,255,0.9)">Sistema completo para assistências técnicas com controle de ordens, estoque e finanças.</p>
+                            <button class="btn-project-detail">Explorar Estudo de Caso</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-item reveal tilt" data-project="cmplace">
                     <img src="cmplace_hero.png" alt="CM Place - Luxury iPhone Store" loading="lazy">
                     <div class="project-overlay">
@@ -374,47 +385,135 @@
 
 
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- Pricing Section -->
+    <section class="pricing" id="planos">
         <div class="container">
             <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
-                <span class="tag">Quem já confia</span>
-                <h2>Resultados reais para negócios locais</h2>
+                <h2 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">Zero surpresas.</h2>
+            </div>
+            <div class="pricing-grid reveal">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Starter</h4>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">2.497</span>
+                            <span class="period">/ único</span>
+                        </div>
+                        <p>Ideal para profissionais autônomos e pequenos negócios.</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i data-lucide="check"></i> Landing page de 1 página</li>
+                            <li><i data-lucide="check"></i> Design responsivo</li>
+                            <li><i data-lucide="check"></i> Formulário de contato</li>
+                            <li><i data-lucide="check"></i> Entrega em 5 dias</li>
+                            <li><i data-lucide="check"></i> Suporte 15 dias</li>
+                        </ul>
+                    </div>
+                    <a href="#contato" class="btn btn-pricing magnetic">Começar —</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card popular">
+                    <div class="popular-tag">★ Mais popular</div>
+                    <div class="pricing-header">
+                        <h4>Pro</h4>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">5.897</span>
+                            <span class="period">/ único</span>
+                        </div>
+                        <p>Para empresas que querem crescer e dominar o mercado.</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i data-lucide="check"></i> Site completo até 8 páginas</li>
+                            <li><i data-lucide="check"></i> Design premium exclusivo</li>
+                            <li><i data-lucide="check"></i> SEO completo</li>
+                            <li><i data-lucide="check"></i> Integração WhatsApp + CRM</li>
+                            <li><i data-lucide="check"></i> Entrega em 7 dias</li>
+                            <li><i data-lucide="check"></i> Suporte 30 dias</li>
+                        </ul>
+                    </div>
+                    <a href="#contato" class="btn btn-pricing magnetic">Quero o Pro —</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h4>Enterprise</h4>
+                        <div class="price custom-price">
+                            <span class="amount" style="font-size: 2.8rem;">Custom</span>
+                        </div>
+                        <p>E-commerce, plataformas e sistemas sob medida.</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i data-lucide="check"></i> Solução 100% personalizada</li>
+                            <li><i data-lucide="check"></i> Integrações complexas</li>
+                            <li><i data-lucide="check"></i> Banco de dados dedicado</li>
+                            <li><i data-lucide="check"></i> Alta escalabilidade</li>
+                            <li><i data-lucide="check"></i> Suporte prioritário 24/7</li>
+                        </ul>
+                    </div>
+                    <a href="#contato" class="btn btn-pricing magnetic">Falar com equipe —</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
+                <span class="tag" style="color: #00E676; letter-spacing: 2px;">✦ DEPOIMENTOS</span>
+                <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.1;">O que nossos clientes<br>estão dizendo.</h2>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card new-style reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
                     <div class="testimonial-content">
-                        <p>"O novo site mudou o jogo para minha clínica. Hoje recebemos muito mais agendamentos pelo WhatsApp do que antes."</p>
+                        <p>"Em 10 dias meu site estava no ar e já na primeira semana fechei 3 contratos que vieram pelo Google. Melhor investimento que fiz."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="João Silva" class="author-img">
+                        <div class="author-avatar" style="background-color: #004D40; color: #00E676;">RC</div>
                         <div class="author-info">
-                            <h5>João Silva</h5>
-                            <span>Clínica Sorriso</span>
+                            <h5>Rafael Costa</h5>
+                            <span>Arquiteto — SP</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card new-style reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
                     <div class="testimonial-content">
-                        <p>"Eu achava que não precisava de site, mas o design premium passou uma confiança que fez minhas vendas dobrarem."</p>
+                        <p>"Minha loja virtual triplicou as vendas em 2 meses depois do novo site. A equipe entendeu exatamente o que eu precisava."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop" alt="Maria Oliveira" class="author-img">
+                        <div class="author-avatar" style="background-color: #01579B; color: #40C4FF;">AM</div>
                         <div class="author-info">
-                            <h5>Maria Oliveira</h5>
-                            <span>Lux Store</span>
+                            <h5>Ana Martins</h5>
+                            <span>E-commerce de moda — RJ</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card new-style reveal">
+                    <div class="stars">
+                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                    </div>
                     <div class="testimonial-content">
-                        <p>"O site carrega instantaneamente no celular dos clientes. Ficou muito fácil para eles verem nossos produtos e pedirem."</p>
+                        <p>"Processo incrível. Aprovei o design em 48h e o site ficou no ar antes do prazo. Profissionalismo do início ao fim."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Ricardo Lima" class="author-img">
+                        <div class="author-avatar" style="background-color: #311B92; color: #B388FF;">LC</div>
                         <div class="author-info">
-                            <h5>Ricardo Lima</h5>
-                            <span>Restaurante Divino</span>
+                            <h5>Lucas Carvalho</h5>
+                            <span>Clínica Odonto — MG</span>
                         </div>
                     </div>
                 </div>
@@ -615,6 +714,9 @@
                         <div class="info-group">
                             <h5>O Resultado</h5>
                             <p id="modal-result" class="highlight-result"></p>
+                        </div>
+                        <div id="modal-external-link" style="margin-top: 15px; display: none;">
+                            <a href="#" target="_blank" class="btn btn-secondary magnetic" style="width: 100%; text-align: center; margin-bottom: 15px; border: 1px solid var(--accent-gold); color: var(--accent-gold);">Acessar Sistema ao Vivo</a>
                         </div>
                         <a href="#" class="btn btn-gold calendly-trigger" style="width: 100%; text-align: center;">Quero um resultado assim</a>
                     </div>
