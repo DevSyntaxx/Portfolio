@@ -1,746 +1,293 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Morais | Criador de sites</title>
-    <meta name="description" content="Projetos modernos, rápidos e pensados para conversão. Transforme visitantes em clientes com um design premium.">
-    <link rel="stylesheet" href="index.css?v=2.1">
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vossosubdominio.com">
-    <meta property="og:title" content="Felipe Morais | Elite Web Design">
-    <meta property="og:description" content="Transforme seu negócio com sites de alta performance e design premium.">
-    <meta property="og:image" content="https://vossosubdominio.com/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vossosubdominio.com">
-    <meta property="twitter:title" content="Felipe Morais | Elite Web Design">
-    <meta property="twitter:description" content="Transforme seu negócio com sites de alta performance e design premium.">
-    <meta property="twitter:image" content="https://vossosubdominio.com/og-image.jpg">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <!-- Calendly link widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <!-- Calendly link widget end -->
-
-    <!-- JSON-LD Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Felipe Morais | Elite Web Design",
-      "image": "https://vossosubdominio.com/profile.jpg",
-      "@id": "",
-      "url": "https://vossosubdominio.com",
-      "telephone": "+5500000000000",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "",
-        "addressLocality": "Brasília",
-        "addressRegion": "DF",
-        "postalCode": "",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -15.7942,
-        "longitude": -47.8822
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://instagram.com/felipemorais",
-        "https://linkedin.com/in/felipemorais"
-      ]
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felipe — Design & Sites</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Floating Background Elements -->
-    <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-    </div>
-    <!-- Pre-loader -->
-    <div class="preloader">
-        <div class="loader-content">
-            <div class="loader-logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                Felipe<span> Morais</span>
-            </div>
-            <div class="loader-bar"></div>
-        </div>
-    </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="ring"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                Felipe<span> Morais</span>
-            </div>
-            <div class="nav-links">
-                <a href="#inicio">Início</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato" class="nav-cta">Falar comigo</a>
-            </div>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">
-                    <i data-lucide="moon" class="moon-icon"></i>
-                    <i data-lucide="sun" class="sun-icon"></i>
-                </button>
-                <button class="mobile-menu-btn" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<nav>
+  <div class="logo nav-logo">Felipe.</div>
+  <ul class="nav-items">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#processo">Processo</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu">
-        <div class="mobile-menu-header">
-            <div class="logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                Felipe<span> Morais</span>
-            </div>
-            <button class="close-menu" aria-label="Fechar menu"><i data-lucide="x"></i></button>
-        </div>
-        <div class="mobile-menu-links">
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-            <a href="#" class="btn btn-gold calendly-trigger">Agendar Reunião</a>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="text-left">
+      <div class="handle">
+        <div class="handle-dot"></div>
+        @felipedesign.co
+      </div>
+      <h2>
+        Se você não confia
+        no <strong>seu<br>trabalho,</strong>
+      </h2>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="container hero-centered">
-            <div class="hero-content reveal">
-                <span class="tag">O Posicionamento que Gera Lucro</span>
-                <h1>Seu site atual está te fazendo perder clientes todos os dias — mesmo enquanto você <span class="highlight">dorme</span>.</h1>
-                <p>Pare de investir em "sites bonitinhos" que não trazem retorno. Criamos <span class="highlight">máquinas de vendas</span> de alto padrão que transformam visitantes em dinheiro no seu bolso.</p>
-                <div class="hero-btns">
-                    <a href="#contato" class="btn btn-gold magnetic">Quero um site que vende</a>
-                    <a href="javascript:void(0)" class="btn btn-secondary magnetic calendly-trigger">Agendar Reunião VIP</a>
-                </div>
-                <div class="hero-trust-bar">
-                    <div class="trust-item">
-                        <strong>+25</strong>
-                        <span>Empresas Transformadas</span>
-                    </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <strong>100%</strong>
-                        <span>Foco em Conversão</span>
-                    </div>
-                    <div class="trust-divider"></div>
-                    <div class="trust-item">
-                        <strong>24h</strong>
-                        <span>Suporte Exclusivo</span>
-                    </div>
-                </div>
-            </div>
+    <div class="photo-wrap">
+      <div class="photo-frame">
+        <!-- Substitua o src pela sua foto real -->
+        <img src="sua-foto.jpg" alt="Felipe"
+          onerror="this.style.display='none'; this.parentNode.querySelector('.photo-placeholder').style.display='flex';">
+        <div class="photo-placeholder" style="display:flex">
+          <div class="placeholder-silhouette"></div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="sobre">
-        <div class="container about-grid">
-            <div class="about-image reveal">
-                <div class="image-wrapper">
-                    <img src="profile.jpg" alt="Estrategista Digital">
-                </div>
-            </div>
-            <div class="about-content reveal">
-                <span class="tag">Autoridade no Mercado</span>
-                <h2>Sua marca merece um design que reflita sua excelência</h2>
-                <p>Não entregamos apenas sites; entregamos ativos digitais estratégicos. Cada projeto é uma fusão entre estética minimalista de luxo e engenharia de software focada em ROI (Retorno sobre Investimento).</p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">+25</span>
-                        <span class="stat-label">Projetos entregues</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfação VIP</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Method Section -->
-    <section class="method" id="metodo">
-        <div class="container">
-            <div class="method-grid reveal">
-                <div class="method-content">
-                    <span class="tag">Por que nós?</span>
-                    <h2>A Engenharia por trás do Luxo Digital</h2>
-                    <p>Não construímos apenas sites; criamos ativos financeiros. Nossa metodologia combina três pilares essenciais para o seu sucesso local:</p>
-                    <div class="pillars">
-                        <div class="pillar">
-                            <i data-lucide="zap"></i>
-                            <div>
-                                <h5>Velocidade Imbatível</h5>
-                                <p>Sites que carregam em menos de 1s. Testado e aprovado pelo Google PageSpeed.</p>
-                            </div>
-                        </div>
-                        <div class="pillar">
-                            <i data-lucide="eye"></i>
-                            <div>
-                                <h5>Engenharia de Conversão</h5>
-                                <p>Layouts baseados em comportamento real de compra. Cada pixel é desenhado para gerar o clique.</p>
-                            </div>
-                        </div>
-                        <div class="pillar">
-                            <i data-lucide="code-2"></i>
-                            <div>
-                                <h5>Foco Total em Leads</h5>
-                                <p>Estrutura pensada para gerar contatos qualificados no seu WhatsApp, não apenas visitas vazias.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="services" id="servicos">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="tag">O que fazemos</span>
-                <h2 style="font-size: 3rem; margin-bottom: 50px;">Soluções exclusivas para negócios que buscam o topo</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card reveal tilt">
-                    <i data-lucide="award" class="service-icon"></i>
-                    <h3>Posicionamento de Autoridade</h3>
-                    <p>Sites institucionais que transmitem confiança imediata e consolidam sua marca no mercado.</p>
-                </div>
-                <div class="service-card reveal tilt">
-                    <i data-lucide="rocket" class="service-icon"></i>
-                    <h3>Landing Pages de Alta Performance</h3>
-                    <p>Estruturas validadas psicologicamente para maximizar cada centavo do seu tráfego pago.</p>
-                </div>
-                <div class="service-card reveal tilt">
-                    <i data-lucide="component" class="service-icon"></i>
-                    <h3>Sistemas de Elite</h3>
-                    <p>Desenvolvimento de aplicações robustas para automatizar processos e escalar sua operação.</p>
-                </div>
-                <div class="service-card reveal tilt">
-                    <i data-lucide="zap" class="service-icon"></i>
-                    <h3>Otimização de Conversão (CRO)</h3>
-                    <p>Auditoria e ajustes técnicos para remover fricções e aumentar sua taxa de fechamento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projetos">
-        <div class="container">
-            <span class="tag" style="text-align: center; display: block;">Portfólio Premium</span>
-            <h2 style="text-align: center; margin-bottom: 60px; font-weight: 300; font-size: 3rem;">Projetos Selecionados</h2>
-            <div class="projects-grid">
-                <div class="project-item reveal tilt" data-project="techflow">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="TechFlow - SaaS de Gestão" loading="lazy" style="opacity: 0.8;">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <span class="project-tag">SaaS / Produto Próprio</span>
-                            <h4>TechFlow — Gestão Inteligente</h4>
-                            <p style="color: rgba(255,255,255,0.9)">Sistema completo para assistências técnicas com controle de ordens, estoque e finanças.</p>
-                            <button class="btn-project-detail">Explorar Estudo de Caso</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item reveal tilt" data-project="cmplace">
-                    <img src="cmplace_hero.png" alt="CM Place - Luxury iPhone Store" loading="lazy">
-                    <div class="project-overlay">
-                        <div class="project-info">
-                            <span class="project-tag">Case Study de Sucesso</span>
-                            <h4>CM Place — Elite Apple Reseller</h4>
-                            <p style="color: rgba(255,255,255,0.9)">Transformação digital completa: de uma loja comum a um ecossistema de luxo.</p>
-                            <button class="btn-project-detail">Explorar Estudo de Caso</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Comparison Section -->
-    <section class="comparison" id="diferenciais">
-        <div class="container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
-                <span class="tag">O Diferencial</span>
-                <h2>Por que não somos apenas mais uma agência?</h2>
-            </div>
-            <div class="comparison-grid reveal">
-                <div class="comp-card common">
-                    <h4>Sites Comuns</h4>
-                    <ul>
-                        <li><i data-lucide="x-circle"></i> Design genérico e datado</li>
-                        <li><i data-lucide="x-circle"></i> Carregamento lento (perde leads)</li>
-                        <li><i data-lucide="x-circle"></i> Sem estratégia de conversão</li>
-                        <li><i data-lucide="x-circle"></i> Suporte demorado</li>
-                    </ul>
-                </div>
-                <div class="comp-card premium">
-                    <div class="best-value">RECOMENDADO</div>
-                    <h4>Nossa Entrega Premium</h4>
-                    <ul>
-                        <li><i data-lucide="check-circle-2"></i> Design Exclusivo de Luxo</li>
-                        <li><i data-lucide="check-circle-2"></i> Performance Extrema (SEO)</li>
-                        <li><i data-lucide="check-circle-2"></i> Foco Total em Vendas</li>
-                        <li><i data-lucide="check-circle-2"></i> Consultoria Estratégica</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Full Package Section -->
-    <section class="full-package reveal">
-        <div class="container">
-            <div class="package-card">
-                <div class="package-header">
-                    <span class="tag">Solução Completa</span>
-                    <h2>Você foca no negócio, nós cuidamos de todo o resto</h2>
-                    <p>Esqueça a burocracia técnica. Entregamos seu ecossistema digital 100% pronto para lucrar.</p>
-                </div>
-                <div class="package-grid">
-                    <div class="package-item">
-                        <i data-lucide="globe"></i>
-                        <div>
-                            <h5>Domínio e Hospedagem</h5>
-                            <p>Configuração completa e o primeiro ano por nossa conta.</p>
-                        </div>
-                    </div>
-                    <div class="package-item">
-                        <i data-lucide="shield-check"></i>
-                        <div>
-                            <h5>Certificado SSL (Segurança)</h5>
-                            <p>Seu site seguro e com o selo de confiança do Google.</p>
-                        </div>
-                    </div>
-                    <div class="package-item">
-                        <i data-lucide="smartphone"></i>
-                        <div>
-                            <h5>Design 100% Responsivo</h5>
-                            <p>Experiência impecável em qualquer tamanho de tela.</p>
-                        </div>
-                    </div>
-                    <div class="package-item">
-                        <i data-lucide="search"></i>
-                        <div>
-                            <h5>SEO Local Estratégico</h5>
-                            <p>Otimizado para ser encontrado por quem está perto de você.</p>
-                        </div>
-                    </div>
-                    <div class="package-item">
-                        <i data-lucide="message-square"></i>
-                        <div>
-                            <h5>WhatsApp Integrado</h5>
-                            <p>Botões de contato estrategicamente posicionados.</p>
-                        </div>
-                    </div>
-                    <div class="package-item">
-                        <i data-lucide="headphones"></i>
-                        <div>
-                            <h5>Suporte VIP Vitalício</h5>
-                            <p>Dúvidas ou ajustes? Estamos a um clique de distância.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="planos">
-        <div class="container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
-                <h2 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">Zero surpresas.</h2>
-            </div>
-            <div class="pricing-grid reveal">
-                <!-- Starter -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4>Starter</h4>
-                        <div class="price">
-                            <span class="currency">R$</span>
-                            <span class="amount">2.497</span>
-                            <span class="period">/ único</span>
-                        </div>
-                        <p>Ideal para profissionais autônomos e pequenos negócios.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i data-lucide="check"></i> Landing page de 1 página</li>
-                            <li><i data-lucide="check"></i> Design responsivo</li>
-                            <li><i data-lucide="check"></i> Formulário de contato</li>
-                            <li><i data-lucide="check"></i> Entrega em 5 dias</li>
-                            <li><i data-lucide="check"></i> Suporte 15 dias</li>
-                        </ul>
-                    </div>
-                    <a href="#contato" class="btn btn-pricing magnetic">Começar —</a>
-                </div>
-
-                <!-- Pro -->
-                <div class="pricing-card popular">
-                    <div class="popular-tag">★ Mais popular</div>
-                    <div class="pricing-header">
-                        <h4>Pro</h4>
-                        <div class="price">
-                            <span class="currency">R$</span>
-                            <span class="amount">5.897</span>
-                            <span class="period">/ único</span>
-                        </div>
-                        <p>Para empresas que querem crescer e dominar o mercado.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i data-lucide="check"></i> Site completo até 8 páginas</li>
-                            <li><i data-lucide="check"></i> Design premium exclusivo</li>
-                            <li><i data-lucide="check"></i> SEO completo</li>
-                            <li><i data-lucide="check"></i> Integração WhatsApp + CRM</li>
-                            <li><i data-lucide="check"></i> Entrega em 7 dias</li>
-                            <li><i data-lucide="check"></i> Suporte 30 dias</li>
-                        </ul>
-                    </div>
-                    <a href="#contato" class="btn btn-pricing magnetic">Quero o Pro —</a>
-                </div>
-
-                <!-- Enterprise -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h4>Enterprise</h4>
-                        <div class="price custom-price">
-                            <span class="amount" style="font-size: 2.8rem;">Custom</span>
-                        </div>
-                        <p>E-commerce, plataformas e sistemas sob medida.</p>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i data-lucide="check"></i> Solução 100% personalizada</li>
-                            <li><i data-lucide="check"></i> Integrações complexas</li>
-                            <li><i data-lucide="check"></i> Banco de dados dedicado</li>
-                            <li><i data-lucide="check"></i> Alta escalabilidade</li>
-                            <li><i data-lucide="check"></i> Suporte prioritário 24/7</li>
-                        </ul>
-                    </div>
-                    <a href="#contato" class="btn btn-pricing magnetic">Falar com equipe —</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="depoimentos">
-        <div class="container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
-                <span class="tag" style="color: #00E676; letter-spacing: 2px;">✦ DEPOIMENTOS</span>
-                <h2 style="font-size: 2.8rem; font-weight: 700; line-height: 1.1;">O que nossos clientes<br>estão dizendo.</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card new-style reveal">
-                    <div class="stars">
-                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Em 10 dias meu site estava no ar e já na primeira semana fechei 3 contratos que vieram pelo Google. Melhor investimento que fiz."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background-color: #004D40; color: #00E676;">RC</div>
-                        <div class="author-info">
-                            <h5>Rafael Costa</h5>
-                            <span>Arquiteto — SP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card new-style reveal">
-                    <div class="stars">
-                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Minha loja virtual triplicou as vendas em 2 meses depois do novo site. A equipe entendeu exatamente o que eu precisava."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background-color: #01579B; color: #40C4FF;">AM</div>
-                        <div class="author-info">
-                            <h5>Ana Martins</h5>
-                            <span>E-commerce de moda — RJ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card new-style reveal">
-                    <div class="stars">
-                        <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Processo incrível. Aprovei o design em 48h e o site ficou no ar antes do prazo. Profissionalismo do início ao fim."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background-color: #311B92; color: #B388FF;">LC</div>
-                        <div class="author-info">
-                            <h5>Lucas Carvalho</h5>
-                            <span>Clínica Odonto — MG</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process" id="metodo">
-        <div class="container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 80px;">
-                <span class="tag">O Método</span>
-                <h2>Sua jornada rumo à elite digital</h2>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step reveal">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h4>Imersão & Estratégia</h4>
-                        <p>Entendemos seu modelo de negócio, público-alvo e objetivos para criar um plano de ataque certeiro.</p>
-                    </div>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h4>Design de Alta Fidelidade</h4>
-                        <p>Prototipagem exclusiva focada em experiência do usuário e psicologia de vendas (UX/UI).</p>
-                    </div>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h4>Desenvolvimento de Elite</h4>
-                        <p>Transformamos o design em código limpo, ultra rápido e otimizado para todos os dispositivos.</p>
-                    </div>
-                </div>
-                <div class="process-step reveal">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h4>Lançamento & Escala</h4>
-                        <p>Seu site entra no ar configurado para conversão, pronto para escalar seu faturamento.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header reveal" style="text-align: center; margin-bottom: 60px;">
-                <span class="tag">Dúvidas Comuns</span>
-                <h2>FAQ de Negócios</h2>
-            </div>
-            <div class="faq-accordion reveal">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h5>Quanto tempo leva para o site ficar pronto?</h5>
-                        <i data-lucide="plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>O prazo médio para uma landing page premium é de 7 a 15 dias úteis, dependendo da complexidade e da agilidade no envio das informações.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h5>Você também faz a identidade visual?</h5>
-                        <i data-lucide="plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Além do desenvolvimento, oferecemos o serviço de Branding e Design Visual para garantir que sua marca transmita autoridade total.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h5>O site terá suporte após o lançamento?</h5>
-                        <i data-lucide="plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Com certeza. Oferecemos 30 dias de suporte total pós-lançamento e planos de manutenção para manter seu site sempre rápido e seguro.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h5>Como funciona o pagamento?</h5>
-                        <i data-lucide="plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Trabalhamos com 50% de sinal para reserva de agenda e 50% na entrega final, via Pix, Boleto ou Cartão de Crédito.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="cta-box reveal">
-                <div class="cta-content">
-                    <h2>Pronto para elevar seu posicionamento digital?</h2>
-                    <p>Vagas limitadas para novos projetos este mês. Garanta sua consultoria estratégica agora.</p>
-                    <div class="cta-btns">
-                        <a href="#contato" class="btn btn-gold magnetic">Iniciar meu projeto</a>
-                        <a href="javascript:void(0)" class="btn btn-outline-white magnetic calendly-trigger">Ver agenda disponível</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contato">
-        <div class="container">
-            <div class="contact-grid reveal">
-                <div class="contact-info">
-                    <span class="tag">O Próximo Passo</span>
-                    <h2>Vamos construir o site que vai fazer seu negócio crescer de verdade?</h2>
-                    <p>Não aceite menos do que o topo. Solicite sua consultoria e pare de perder dinheiro hoje mesmo.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i data-lucide="mail"></i>
-                            <span>soufelipemorais@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i data-lucide="map-pin"></i>
-                            <span>Atendimento Digital para todo o Brasil</span>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/mvzlpwlr" method="POST">
-                    <input type="text" name="nome" placeholder="Nome Completo" required>
-                    <input type="tel" name="whatsapp" placeholder="Seu WhatsApp (com DDD)" required>
-                    <input type="text" name="empresa" placeholder="Nome da Empresa / Ramo" required>
-                    <textarea name="mensagem" placeholder="Fale um pouco sobre seu projeto e objetivos..." rows="4"></textarea>
-                    <button type="submit" class="btn btn-gold">Quero meu projeto premium</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                        Felipe<span> Morais</span>
-                    </div>
-                    <p>Design de elite para marcas que buscam o topo.</p>
-                </div>
-                <div class="footer-nav">
-                    <h5>Navegação</h5>
-                    <a href="#inicio">Início</a>
-                    <a href="#metodo">Método</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#projetos">Projetos</a>
-                </div>
-                <div class="footer-social">
-                    <h5>Social</h5>
-                    <div class="social-icons">
-                        <a href="https://instagram.com/felipemorais_" target="_blank"><i data-lucide="instagram"></i></a>
-                        <a href="https://linkedin.com/in/felipemorais" target="_blank"><i data-lucide="linkedin"></i></a>
-                        <a href="https://github.com/DevSyntaxx" target="_blank"><i data-lucide="github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© <span id="current-year"></span> Felipe Morais. Todos os direitos reservados. Designed by Felipe Morais.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Project Modal -->
-    <div class="project-modal" id="project-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close"><i data-lucide="x"></i></button>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="modal-tag">Case Study</span>
-                    <h2 id="modal-title">Título do Projeto</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-image">
-                        <img id="modal-img" src="" alt="">
-                    </div>
-                    <div class="modal-info">
-                        <div class="info-group">
-                            <h5>O Desafio</h5>
-                            <p id="modal-challenge"></p>
-                        </div>
-                        <div class="info-group">
-                            <h5>A Solução</h5>
-                            <p id="modal-solution"></p>
-                        </div>
-                        <div class="info-group">
-                            <h5>O Resultado</h5>
-                            <p id="modal-result" class="highlight-result"></p>
-                        </div>
-                        <div id="modal-external-link" style="margin-top: 15px; display: none;">
-                            <a href="#" target="_blank" class="btn btn-secondary magnetic" style="width: 100%; text-align: center; margin-bottom: 15px; border: 1px solid var(--accent-gold); color: var(--accent-gold);">Acessar Sistema ao Vivo</a>
-                        </div>
-                        <a href="#" class="btn btn-gold calendly-trigger" style="width: 100%; text-align: center;">Quero um resultado assim</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- Success Modal -->
-    <div class="project-modal" id="success-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container" style="max-width: 500px; text-align: center;">
-            <button class="modal-close"><i data-lucide="x"></i></button>
-            <div class="modal-content">
-                <div class="success-icon" style="font-size: 4rem; color: #2ecc71; margin-bottom: 20px;">
-                    <i data-lucide="check-circle-2"></i>
-                </div>
-                <h2>Mensagem Enviada!</h2>
-                <p>Recebemos seus dados. Felipe Morais entrará em contato com você pessoalmente em até 24 horas úteis.</p>
-                <button class="btn btn-gold modal-close-btn" style="margin-top: 30px; width: 100%;">Entendido</button>
-            </div>
-        </div>
+    <div class="text-right">
+      <h2>
+        por que
+        o <strong>cliente<br>confiaria?</strong>
+      </h2>
     </div>
 
-    <script src="index.js"></script>
+    <div class="hero-bottom">
+      <div class="scroll-label">
+        <div class="scroll-line"></div>
+        Scroll para descobrir
+      </div>
+      <a href="#contato" class="btn-cta">
+        ↗ Acessar o site
+        <div class="btn-arrow">↗</div>
+      </a>
+      <div class="hero-sub">
+        Sites que transmitem confiança<br>e convertem visitas em clientes.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOBRE -->
+<section class="sobre reveal" id="sobre">
+  <div>
+    <div class="sobre-label">— Sobre mim</div>
+    <h2><span>Eu crio sites que fazem</span><br>seu negócio<br>vender mais.</h2>
+    <p class="sobre-text">
+      Mais de 5 anos criando presença digital para empreendedores e empresas que entendem que um bom site não é custo — é investimento com retorno mensurável.
+    </p>
+  </div>
+  <div class="sobre-stats">
+    <div class="stat-item">
+      <div class="stat-num">180+</div>
+      <div class="stat-desc">Projetos entregues com sucesso</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">7d</div>
+      <div class="stat-desc">Prazo médio de entrega</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">+240%</div>
+      <div class="stat-desc">Aumento médio em conversões</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98%</div>
+      <div class="stat-desc">Clientes satisfeitos</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVIÇOS -->
+<section class="servicos reveal" id="servicos">
+  <div class="servicos-header">
+    <h2><span>O que eu</span><br>entrego</h2>
+    <div class="servicos-count">04 serviços</div>
+  </div>
+  <div class="servicos-list">
+    <div class="servico-item">
+      <div class="servico-left">
+        <span class="servico-num">01</span>
+        <span class="servico-name">Landing Pages</span>
+      </div>
+      <span class="servico-tag">Conversão</span>
+    </div>
+    <div class="servico-item">
+      <div class="servico-left">
+        <span class="servico-num">02</span>
+        <span class="servico-name">Sites Institucionais</span>
+      </div>
+      <span class="servico-tag">Credibilidade</span>
+    </div>
+    <div class="servico-item">
+      <div class="servico-left">
+        <span class="servico-num">03</span>
+        <span class="servico-name">Lojas Virtuais</span>
+      </div>
+      <span class="servico-tag">E-commerce</span>
+    </div>
+    <div class="servico-item">
+      <div class="servico-left">
+        <span class="servico-num">04</span>
+        <span class="servico-name">SEO & Performance</span>
+      </div>
+      <span class="servico-tag">Google</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="processo reveal" id="processo">
+  <div class="processo-inner">
+    <div class="processo-header">
+      <h2><span>Como</span><br>funciona</h2>
+      <p class="processo-desc">
+        Um processo direto e sem burocracia. Do briefing ao lançamento, você acompanha cada etapa em tempo real.
+      </p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">Etapa 01</div>
+        <div class="step-title">Briefing estratégico</div>
+        <div class="step-desc">Entendemos seu negócio, público e objetivos em uma reunião de 30 min.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Etapa 02</div>
+        <div class="step-title">Design & protótipo</div>
+        <div class="step-desc">Visual completo em até 48h para aprovação antes de qualquer código.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Etapa 03</div>
+        <div class="step-title">Desenvolvimento</div>
+        <div class="step-desc">Codamos com foco em velocidade, SEO e experiência de conversão.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">Etapa 04</div>
+        <div class="step-title">Publicação</div>
+        <div class="step-desc">Lançamos, configuramos domínio e entregamos com 30 dias de suporte.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREÇOS -->
+<section class="precos reveal" id="precos">
+  <div class="precos-header">
+    <h2><span>Investimento</span><br>transparente</h2>
+  </div>
+  <div class="precos-grid">
+    <div class="preco-card">
+      <div class="plan-label">Starter</div>
+      <div class="plan-price">R$2.497</div>
+      <div class="plan-price-sub">pagamento único</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li><span class="check-icon"></span> Landing page 1 página</li>
+        <li><span class="check-icon"></span> Design responsivo</li>
+        <li><span class="check-icon"></span> Formulário de contato</li>
+        <li><span class="check-icon"></span> Entrega em 5 dias</li>
+        <li><span class="check-icon"></span> Suporte 15 dias</li>
+      </ul>
+      <button class="btn-plan btn-plan-outline">Começar →</button>
+    </div>
+    <div class="preco-card featured">
+      <div class="plan-label">Pro — Mais popular</div>
+      <div class="plan-price">R$5.897</div>
+      <div class="plan-price-sub">pagamento único</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li><span class="check-icon"></span> Site completo 8 páginas</li>
+        <li><span class="check-icon"></span> Design premium exclusivo</li>
+        <li><span class="check-icon"></span> SEO completo</li>
+        <li><span class="check-icon"></span> WhatsApp + CRM</li>
+        <li><span class="check-icon"></span> Entrega em 7 dias</li>
+        <li><span class="check-icon"></span> Suporte 30 dias</li>
+      </ul>
+      <button class="btn-plan btn-plan-fill">Quero o Pro →</button>
+    </div>
+    <div class="preco-card">
+      <div class="plan-label">Enterprise</div>
+      <div class="plan-price">Custom</div>
+      <div class="plan-price-sub">sob consulta</div>
+      <div class="plan-divider"></div>
+      <ul class="plan-features">
+        <li><span class="check-icon"></span> E-commerce ou sistema</li>
+        <li><span class="check-icon"></span> Páginas ilimitadas</li>
+        <li><span class="check-icon"></span> Painel admin</li>
+        <li><span class="check-icon"></span> Integrações avançadas</li>
+        <li><span class="check-icon"></span> Suporte 90 dias</li>
+      </ul>
+      <button class="btn-plan btn-plan-outline">Falar agora →</button>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos reveal">
+  <h2>O que os clientes <strong>estão falando</strong></h2>
+  <div class="dep-grid">
+    <div class="dep-card">
+      <p class="dep-text">"Em 10 dias meu site estava no ar e na primeira semana fechei 3 contratos novos. O site transmite exatamente a autoridade que eu queria."</p>
+      <div class="dep-author">
+        <div class="dep-avatar">RC</div>
+        <div>
+          <div class="dep-name">Rafael Costa</div>
+          <div class="dep-role">Arquiteto — São Paulo</div>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card">
+      <p class="dep-text">"Minha loja triplicou as vendas em 2 meses. O design é exatamente o que eu precisava para passar confiança aos meus clientes."</p>
+      <div class="dep-author">
+        <div class="dep-avatar">AM</div>
+        <div>
+          <div class="dep-name">Ana Martins</div>
+          <div class="dep-role">E-commerce de moda — Rio de Janeiro</div>
+        </div>
+      </div>
+    </div>
+    <div class="dep-card">
+      <p class="dep-text">"Processo incrível, aprovei o design em 48h e o site ficou pronto antes do prazo. Profissionalismo impecável do começo ao fim."</p>
+      <div class="dep-author">
+        <div class="dep-avatar">LS</div>
+        <div>
+          <div class="dep-name">Lucas Souza</div>
+          <div class="dep-role">Clínica médica — Belo Horizonte</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final reveal" id="contato">
+  <div class="cta-bg-text">SITE</div>
+  <div class="cta-final-inner">
+    <h2><span>Pronto para ter</span><br>o site que seu<br>negócio merece?</h2>
+    <p>Fale comigo hoje e receba uma proposta personalizada sem compromisso.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn-cta" style="font-size:1rem;padding:1.1rem 2.5rem">↗ Solicitar proposta</a>
+      <a href="#" class="btn-cta" style="font-size:1rem;padding:1.1rem 2.5rem;background:#25D366">↗ WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="nav-logo" style="font-family:'Unbounded',sans-serif;font-size:.75rem;font-weight:700;color:#0D0D0D">Felipe.</div>
+  <div class="foot-links">
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Behance</a>
+  </div>
+  <div>© 2025 — Todos os direitos reservados</div>
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>
